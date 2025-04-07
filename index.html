@@ -18,8 +18,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
     />
 
     <!-- swiper -->
@@ -36,9 +45,57 @@
     />
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" id="navbar-container">
+          <a href="./index.html" class="logo">
+            <picture>
+              <!-- Para telas menores (mobile) -->
+              <source
+                media="(max-width: 768px)"
+                srcset="./assets/images/logo-napoleao-sem-fundo.webp"
+                width="160"
+                height="85.4"
+              />
+
+              <!-- Para telas maiores (desktop) -->
+              <img
+                src="./assets/images/logo-napoleao-sem-fundo.webp"
+                alt="Logo do Napoleão Buffet"
+                width="320"
+                height="170.8"
+              />
+            </picture>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">O Napoleão</a>
+              <a class="nav-link" href="#">Eventos</a>
+              <a class="nav-link" href="#">Fotos</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <script defer src="./assets/js/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/swiper-config.js"></script>
   </body>
