@@ -13,6 +13,15 @@
   --font-size-20: 1.25rem;
   --font-size-16: 1rem;
   --font-size-12: 0.8rem;
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-12: 0.75rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-40: 2.5rem;
+  --spacing-48: 3rem;
+  --spacing-80: 5rem;
 }
 
 /* CSS reset */
@@ -22,6 +31,9 @@ body {
   padding: 0;
   font-family: var(--font-roboto-serif);
   font-size: var(--font-size-16);
+  box-sizing: border-box;
+  background: url('../images/landscape-shot-white-textured-background.webp')
+    no-repeat center center fixed;
 }
 
 p,
@@ -33,4 +45,38 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+}
+
+.navbar {
+  box-shadow: 0px 0px 10px 1px #000000;
+  box-sizing: border-box;
+  #navbar-container {
+    padding: 0;
+
+    & .navbar-toggler {
+      margin-right: var(--spacing-16);
+      position: relative;
+      z-index: 980;
+    }
+
+    & .navbar-collapse {
+      background-color: var(--color-gold);
+      padding: var(--spacing-16) 0;
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      box-shadow: 0px 0px 10px 1px var(--color-brown);
+
+      @media (min-width: 768px) {
+        position: relative;
+        box-sizing: border-box;
+        background-color: transparent;
+        box-shadow: unset;
+      }
+
+      & .navbar-nav {
+        align-items: center;
+      }
+    }
+  }
 }
