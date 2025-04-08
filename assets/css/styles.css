@@ -58,6 +58,8 @@ h6 {
 .navbar {
   box-shadow: 0px 0px 10px 1px #000000;
   box-sizing: border-box;
+  margin-bottom: var(--spacing-40);
+
   #navbar-container {
     padding: 0;
 
@@ -74,6 +76,7 @@ h6 {
       width: 100%;
       top: 0px;
       box-shadow: 0px 0px 10px 1px var(--color-brown);
+      z-index: 10;
 
       @media (min-width: 768px) {
         position: relative;
@@ -84,6 +87,40 @@ h6 {
 
       & .navbar-nav {
         align-items: center;
+      }
+    }
+  }
+}
+
+.hero-section {
+  margin-bottom: var(--spacing-40);
+
+  & .hero-section-container {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & .carousel-inner {
+      border-radius: 20px;
+
+      @media (min-width: 768px) {
+        width: 80%;
+      }
+    }
+
+    & button {
+      & .carousel-control-prev-icon {
+        @media (min-width: 768px) {
+          background-image: url(../images/icons8-previous-50.webp);
+        }
+      }
+
+      & .carousel-control-next-icon {
+        @media (min-width: 768px) {
+          background-image: url(../images/icons8-next-50.webp);
+        }
       }
     }
   }
