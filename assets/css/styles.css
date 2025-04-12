@@ -176,6 +176,11 @@ main {
           font-size: var(--font-size-24);
         }
       }
+
+      & a:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+      }
     }
 
     & .about-us-container-grid {
@@ -195,14 +200,76 @@ main {
       }
 
       & .about-us-container-grid-item {
-        & .grid-item-img {
-          border-radius: var(--border-radius-20);
-          margin-bottom: var(--spacing-16);
-        }
-
         & p {
           text-align: end;
           margin-bottom: var(--spacing-16);
+        }
+
+        & .about-us-container-grid-item-overlay {
+          position: relative;
+          overflow: hidden;
+          border-radius: var(--border-radius-20);
+          margin-bottom: var(--spacing-20);
+
+          &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1;
+            border-radius: var(--border-radius-20);
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px solid var(--color-white);
+            border-radius: var(--border-radius-20);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 2;
+          }
+
+          &:hover::before,
+          &:hover::after {
+            opacity: 1;
+          }
+
+          & img {
+            transition: transform 0.3s ease-in-out;
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+
+          &:hover img {
+            transform: scale(1.1);
+          }
+
+          & h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: white;
+            font-size: var(--font-size-24);
+            text-align: center;
+            display: none;
+            @media (min-width: 768px) {
+              font-size: var(--font-size-31);
+            }
+          }
+
+          &:hover h2 {
+            display: block;
+          }
         }
       }
     }
@@ -261,6 +328,11 @@ main {
           margin-bottom: 0;
           text-align: center;
         }
+      }
+
+      & a:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
       }
     }
   }
