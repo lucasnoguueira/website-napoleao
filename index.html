@@ -46,6 +46,30 @@
 
     <link
       rel="preload"
+      href="./assets/images/espaco-napoleao/espaco-napoleao-3.webp"
+      as="image"
+      fetchpriority="high"
+      media="(max-width: 767px)"
+    />
+
+    <link
+      rel="preload"
+      href="./assets/images/espaco-provence/espaco-provence-3.webp"
+      as="image"
+      fetchpriority="high"
+      media="(max-width: 767px)"
+    />
+
+    <link
+      rel="preload"
+      href="./assets/images/espaco-paris/espaco-paris-6.webp"
+      as="image"
+      fetchpriority="high"
+      media="(max-width: 767px)"
+    />
+
+    <link
+      rel="preload"
       href="./assets/images/espaco-napoleao/espaco-napoleao-1.webp"
       as="image"
       fetchpriority="high"
@@ -89,17 +113,19 @@
               <!-- Para telas menores (mobile) -->
               <source
                 media="(max-width: 768px)"
-                srcset="./assets/images/logo-napoleao-sem-fundo.webp"
-                width="160"
-                height="85.4"
+                srcset="
+                  https://napoleao.com.br/wp-content/uploads/elementor/thumbs/napoleao-qwxia0vqhb755xdic0u4yltyjhxafyedjgn98c10yo.png
+                "
+                width="100"
+                height="100"
               />
 
               <!-- Para telas maiores (desktop) -->
               <img
-                src="./assets/images/logo-napoleao-sem-fundo.webp"
+                src="https://napoleao.com.br/wp-content/uploads/elementor/thumbs/napoleao-qwxia0vqhb755xdic0u4yltyjhxafyedjgn98c10yo.png"
                 alt="Logo do Napoleão Buffet"
-                width="320"
-                height="170.8"
+                width="100"
+                height="100"
               />
             </picture>
           </a>
@@ -129,20 +155,25 @@
       <section class="hero-section" id="hero-section">
         <div class="carousel slide">
           <div class="container hero-section-container">
+            <div class="hero-overlay"></div>
+
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <picture>
                   <!-- Para telas menores (mobile) -->
                   <source
                     media="(max-width: 768px)"
-                    srcset="./assets/images/banner-img-1.jpg"
+                    srcset="
+                      ./assets/images/espaco-napoleao/espaco-napoleao-3.webp
+                    "
                   />
 
                   <!-- Para telas maiores (desktop) -->
                   <img
-                    src="./assets/images/banner-img-1.jpg"
+                    src="./assets/images/espaco-napoleao/espaco-napoleao-3.webp"
                     class="d-block w-100"
                     alt="Espaço Provence do Napoleão Buffet"
+                    loading="lazy"
                   />
                 </picture>
               </div>
@@ -151,14 +182,17 @@
                   <!-- Para telas menores (mobile) -->
                   <source
                     media="(max-width: 768px)"
-                    srcset="./assets/images/banner-img-2.jpg"
+                    srcset="
+                      ./assets/images/espaco-provence/espaco-provence-3.webp
+                    "
                   />
 
                   <!-- Para telas maiores (desktop) -->
                   <img
-                    src="./assets/images/banner-img-2.jpg"
+                    src="./assets/images/espaco-provence/espaco-provence-3.webp"
                     class="d-block w-100"
                     alt="Espaço Terraço do Napoleão Buffet"
+                    loading="lazy"
                   />
                 </picture>
               </div>
@@ -167,14 +201,15 @@
                   <!-- Para telas menores (mobile) -->
                   <source
                     media="(max-width: 768px)"
-                    srcset="./assets/images/banner-img-3.jpg"
+                    srcset="./assets/images/espaco-paris/espaco-paris-6.webp"
                   />
 
                   <!-- Para telas maiores (desktop) -->
                   <img
-                    src="./assets/images/banner-img-3.jpg"
+                    src="./assets/images/espaco-paris/espaco-paris-6.webp"
                     class="d-block w-100"
                     alt="Espaço Jardim do Napoleão Buffet"
+                    loading="lazy"
                   />
                 </picture>
               </div>
@@ -203,11 +238,17 @@
               ></span>
               <span class="visually-hidden">Next</span>
             </button>
+            <a class="arrow-next-section" href="#about-us">
+              <img
+                src="./assets/images/icons8-down-button-50.webp"
+                alt="Seta direcionando para a próxima seção do site"
+              />
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="about-us">
+      <section class="about-us" id="about-us">
         <div class="about-us-container container">
           <div class="about-us-container-text">
             <h1>O Napoleão</h1>
