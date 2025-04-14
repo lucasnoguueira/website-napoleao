@@ -57,6 +57,7 @@ html {
   background: url('../images/landscape-shot-white-textured-background.webp')
     no-repeat center center fixed;
   scroll-behavior: smooth;
+  background-size: cover;
 }
 
 p,
