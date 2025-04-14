@@ -44,6 +44,55 @@
       href="./assets/css/styles.css"
     />
 
+    <!-- PRELOAD DE IMAGENS -->
+
+    <link
+      rel="preload"
+      href="./assets/images/eventos/aniversario.webp"
+      as="image"
+      fetchpriority="low"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="preload"
+      href="./assets/images/eventos/debutante-1.webp"
+      as="image"
+      fetchpriority="low"
+      media="(max-width: 767px)"
+    />
+
+    <link
+      rel="preload"
+      href="./assets/images/eventos/bodas.webp"
+      as="image"
+      fetchpriority="low"
+      media="(max-width: 767px)"
+    />
+
+    <link
+      rel="preload"
+      href="./assets/images/eventos/casamento.webp"
+      as="image"
+      fetchpriority="low"
+      media="(max-width: 767px)"
+    />
+
+    <link
+      rel="preload"
+      href="./assets/images/eventos/corporativo.webp"
+      as="image"
+      fetchpriority="low"
+      media="(max-width: 767px)"
+    />
+
+    <link
+      rel="preload"
+      href="./assets/images/eventos/formatura.webp"
+      as="image"
+      fetchpriority="low"
+      media="(max-width: 767px)"
+    />
+
     <link
       rel="preload"
       href="./assets/images/espaco-napoleao/espaco-napoleao-3.webp"
@@ -56,7 +105,7 @@
       rel="preload"
       href="./assets/images/espaco-provence/espaco-provence-3.webp"
       as="image"
-      fetchpriority="high"
+      fetchpriority="low"
       media="(max-width: 767px)"
     />
 
@@ -64,7 +113,7 @@
       rel="preload"
       href="./assets/images/espaco-paris/espaco-paris-6.webp"
       as="image"
-      fetchpriority="high"
+      fetchpriority="low"
       media="(max-width: 767px)"
     />
 
@@ -72,35 +121,35 @@
       rel="preload"
       href="./assets/images/espaco-napoleao/espaco-napoleao-1.webp"
       as="image"
-      fetchpriority="high"
+      fetchpriority="low"
       media="(max-width: 767px)"
     />
     <link
       rel="preload"
       href="./assets/images/espaco-paris/espaco-paris-1.webp"
       as="image"
-      fetchpriority="high"
+      fetchpriority="low"
       media="(max-width: 767px)"
     />
     <link
       rel="preload"
       href="./assets/images/espaco-praca/espaco-praca-1.webp"
       as="image"
-      fetchpriority="high"
+      fetchpriority="low"
       media="(max-width: 767px)"
     />
     <link
       rel="preload"
       href="./assets/images/espaco-provence/espaco-provence-1.webp"
       as="image"
-      fetchpriority="high"
+      fetchpriority="low"
       media="(max-width: 767px)"
     />
     <link
       rel="preload"
       href="./assets/images/espaco-terraco/espaco-terraco-1.webp"
       as="image"
-      fetchpriority="high"
+      fetchpriority="low"
       media="(max-width: 767px)"
     />
   </head>
@@ -109,25 +158,13 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid" id="navbar-container">
           <a href="./index.html" class="logo">
-            <picture>
-              <!-- Para telas menores (mobile) -->
-              <source
-                media="(max-width: 768px)"
-                srcset="
-                  https://napoleao.com.br/wp-content/uploads/elementor/thumbs/napoleao-qwxia0vqhb755xdic0u4yltyjhxafyedjgn98c10yo.png
-                "
-                width="100"
-                height="100"
-              />
-
-              <!-- Para telas maiores (desktop) -->
-              <img
-                src="https://napoleao.com.br/wp-content/uploads/elementor/thumbs/napoleao-qwxia0vqhb755xdic0u4yltyjhxafyedjgn98c10yo.png"
-                alt="Logo do Napoleão Buffet"
-                width="100"
-                height="100"
-              />
-            </picture>
+            <img
+              src="https://napoleao.com.br/wp-content/uploads/elementor/thumbs/napoleao-qwxia0vqhb755xdic0u4yltyjhxafyedjgn98c10yo.png"
+              alt="Logo do Napoleão Buffet"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
           </a>
           <button
             class="navbar-toggler"
@@ -146,6 +183,7 @@
               <a class="nav-link" href="#">O Napoleão</a>
               <a class="nav-link" href="#">Eventos</a>
               <a class="nav-link" href="#">Fotos</a>
+              <a class="nav-link" href="#">Orçamento</a>
             </div>
           </div>
         </div>
@@ -163,59 +201,31 @@
 
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <picture>
-                  <!-- Para telas menores (mobile) -->
-                  <source
-                    media="(max-width: 768px)"
-                    srcset="
-                      ./assets/images/espaco-napoleao/espaco-napoleao-3.webp
-                    "
-                  />
-
-                  <!-- Para telas maiores (desktop) -->
-                  <img
-                    src="./assets/images/espaco-napoleao/espaco-napoleao-3.webp"
-                    class="d-block w-100"
-                    alt="Espaço Provence do Napoleão Buffet"
-                    loading="lazy"
-                  />
-                </picture>
+                <img
+                  src="./assets/images/espaco-napoleao/espaco-napoleao-3.webp"
+                  class="d-block w-100"
+                  alt="Espaço Provence do Napoleão Buffet"
+                  loading="lazy"
+                  fetchpriority="high"
+                />
               </div>
               <div class="carousel-item">
-                <picture>
-                  <!-- Para telas menores (mobile) -->
-                  <source
-                    media="(max-width: 768px)"
-                    srcset="
-                      ./assets/images/espaco-provence/espaco-provence-3.webp
-                    "
-                  />
-
-                  <!-- Para telas maiores (desktop) -->
-                  <img
-                    src="./assets/images/espaco-provence/espaco-provence-3.webp"
-                    class="d-block w-100"
-                    alt="Espaço Terraço do Napoleão Buffet"
-                    loading="lazy"
-                  />
-                </picture>
+                <img
+                  src="./assets/images/espaco-provence/espaco-provence-3.webp"
+                  class="d-block w-100"
+                  alt="Espaço Terraço do Napoleão Buffet"
+                  loading="lazy"
+                  fetchpriority="low"
+                />
               </div>
               <div class="carousel-item">
-                <picture>
-                  <!-- Para telas menores (mobile) -->
-                  <source
-                    media="(max-width: 768px)"
-                    srcset="./assets/images/espaco-paris/espaco-paris-6.webp"
-                  />
-
-                  <!-- Para telas maiores (desktop) -->
-                  <img
-                    src="./assets/images/espaco-paris/espaco-paris-6.webp"
-                    class="d-block w-100"
-                    alt="Espaço Jardim do Napoleão Buffet"
-                    loading="lazy"
-                  />
-                </picture>
+                <img
+                  src="./assets/images/espaco-paris/espaco-paris-6.webp"
+                  class="d-block w-100"
+                  alt="Espaço Jardim do Napoleão Buffet"
+                  loading="lazy"
+                  fetchpriority="low"
+                />
               </div>
             </div>
             <button
@@ -246,6 +256,8 @@
               <img
                 src="./assets/images/icons8-down-button-50.webp"
                 alt="Seta direcionando para a próxima seção do site"
+                loading="lazy"
+                fetchpriority="low"
               />
             </a>
           </div>
@@ -261,20 +273,13 @@
           <div class="about-us-container-grid">
             <div class="col-md-6 about-us-container-grid-item">
               <div class="about-us-container-grid-item-overlay">
-                <picture>
-                  <!-- Para telas menores (mobile) -->
-                  <source
-                    media="(max-width: 768px)"
-                    srcset="./assets/images/banner-img-1.jpg"
-                  />
-
-                  <!-- Para telas maiores (desktop) -->
-                  <img
-                    src="./assets/images/banner-img-1.jpg"
-                    class="d-block w-100 grid-item-img"
-                    alt="Espaço Provence do Napoleão Buffet"
-                  />
-                </picture>
+                <img
+                  src="./assets/images/banner-img-1.jpg"
+                  class="d-block w-100 grid-item-img"
+                  alt="Espaço Provence do Napoleão Buffet"
+                  loading="lazy"
+                  fetchpriority="low"
+                />
                 <h2>Espaço Provence</h2>
               </div>
               <p>
@@ -286,20 +291,13 @@
             </div>
             <div class="col-md-6 about-us-container-grid-item">
               <div class="about-us-container-grid-item-overlay">
-                <picture>
-                  <!-- Para telas menores (mobile) -->
-                  <source
-                    media="(max-width: 768px)"
-                    srcset="./assets/images/banner-img-1.jpg"
-                  />
-
-                  <!-- Para telas maiores (desktop) -->
-                  <img
-                    src="./assets/images/banner-img-1.jpg"
-                    class="d-block w-100 grid-item-img"
-                    alt="Espaço Napoleão do Napoleão Buffet"
-                  />
-                </picture>
+                <img
+                  src="./assets/images/banner-img-1.jpg"
+                  class="d-block w-100 grid-item-img"
+                  alt="Espaço Napoleão do Napoleão Buffet"
+                  loading="lazy"
+                  fetchpriority="low"
+                />
                 <h2>Espaço Napoleão</h2>
               </div>
             </div>
@@ -331,6 +329,7 @@
                     src="./assets/images/espaco-napoleao/espaco-napoleao-1.webp"
                     loading="lazy"
                     alt="1"
+                    fetchpriority="low"
                   />
                   <div class="overlay">
                     <h2>Espaço Napoleão</h2>
@@ -343,6 +342,7 @@
                     src="./assets/images/espaco-paris/espaco-paris-1.webp"
                     loading="lazy"
                     alt="2"
+                    fetchpriority="low"
                   />
                   <div class="overlay">
                     <h2>Espaço Paris</h2>
@@ -355,6 +355,7 @@
                     src="./assets/images/espaco-provence/espaco-provence-1.webp"
                     loading="lazy"
                     alt="3"
+                    fetchpriority="low"
                   />
                   <div class="overlay">
                     <h2>Espaço Provence</h2>
@@ -367,6 +368,7 @@
                     src="./assets/images/espaco-terraco/espaco-terraco-1.webp"
                     loading="lazy"
                     alt="3"
+                    fetchpriority="low"
                   />
                   <div class="overlay">
                     <h2>Espaço Terraço</h2>
@@ -379,6 +381,7 @@
                     src="./assets/images/espaco-praca/espaco-praca-1.webp"
                     loading="lazy"
                     alt="3"
+                    fetchpriority="low"
                   />
                   <div class="overlay">
                     <h2>Espaço Praça</h2>
@@ -388,6 +391,132 @@
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="our-events">
+        <div class="our-events-container container">
+          <div class="our-events-container-title">
+            <h2>Nossos Eventos</h2>
+          </div>
+          <div class="our-events-list swiper">
+            <div class="swiper-wrapper">
+              <div class="our-events-item swiper-slide">
+                <a href="" target="_blank">
+                  <picture>
+                    <img
+                      src="./assets/images/eventos/debutante-1.webp"
+                      class="d-block w-100 our-events-item-img"
+                      alt="Imagem de um bolo de uma debutante"
+                      loading="lazy"
+                      fetchpriority="low"
+                    />
+                    <h2>Debutantes</h2>
+                    <p>
+                      Realize a sua festa de debutante com o Napoleão Buffet
+                    </p>
+                    <p>Saiba mais</p>
+                  </picture>
+                </a>
+              </div>
+              <div class="our-events-item swiper-slide">
+                <a href="" target="_blank">
+                  <picture>
+                    <img
+                      src="./assets/images/eventos/casamento.webp"
+                      class="d-block w-100 our-events-item-img our-events-item-img-casamento"
+                      alt="Imagem de uma casal casando no Napoleão Buffet"
+                      loading="lazy"
+                      fetchpriority="low"
+                    />
+                    <h2>Casamentos</h2>
+                    <p>
+                      O momento mais esperado da sua vida no melhor lugar do
+                      mundo!
+                    </p>
+                    <p>Saiba mais</p>
+                  </picture>
+                </a>
+              </div>
+              <div class="our-events-item swiper-slide">
+                <a href="" target="_blank">
+                  <picture>
+                    <img
+                      src="./assets/images/eventos/aniversario.webp"
+                      class="d-block w-100 our-events-item-img"
+                      alt="Imagem de uma festa de aniversário"
+                      loading="lazy"
+                      fetchpriority="low"
+                    />
+                    <h2>Aniversários</h2>
+                    <p>
+                      Um dos momentos mais alegres do ano em um espaço especial!
+                    </p>
+                    <p>Saiba mais</p>
+                  </picture>
+                </a>
+              </div>
+              <div class="our-events-item swiper-slide">
+                <a href="" target="_blank">
+                  <picture>
+                    <img
+                      src="./assets/images/eventos/corporativo.webp"
+                      class="d-block w-100 our-events-item-img"
+                      alt="Imagem de um evento corporativo"
+                      loading="lazy"
+                      fetchpriority="low"
+                    />
+                    <h2>Corporativo</h2>
+                    <p>
+                      Conte com um espaço moderno para o seu evento corporativo.
+                    </p>
+                    <p>Saiba mais</p>
+                  </picture>
+                </a>
+              </div>
+              <div class="our-events-item swiper-slide">
+                <a href="" target="_blank">
+                  <picture>
+                    <img
+                      src="./assets/images/eventos/bodas.webp"
+                      class="d-block w-100 our-events-item-img"
+                      alt="Imagem de uma festa de bodas de casamento"
+                      loading="lazy"
+                      fetchpriority="low"
+                    />
+                    <h2>Bodas</h2>
+                    <p>
+                      Celebre as renovações de votos da melhor maneira possível
+                      no Napoleão!
+                    </p>
+                    <p>Saiba mais</p>
+                  </picture>
+                </a>
+              </div>
+              <div class="our-events-item swiper-slide">
+                <a href="" target="_blank">
+                  <picture>
+                    <img
+                      src="./assets/images/eventos/formatura.webp"
+                      class="d-block w-100 our-events-item-img"
+                      alt="Imagem de uma festa de formatura"
+                      loading="lazy"
+                      fetchpriority="low"
+                    />
+                    <h2>Formaturas</h2>
+                    <p>Realize a sua festa formatura com a Napoleão Buffet</p>
+                    <p>Saiba mais</p>
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="our-events-list-pagination-container">
+              <div class="our-events-list-pagination swiper-pagination"></div>
+
+              <div class="swiper-button-next our-events-list-button-next"></div>
+              <div class="swiper-button-prev our-events-list-button-prev"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -403,6 +532,7 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
+      defer
     ></script>
   </body>
 </html>

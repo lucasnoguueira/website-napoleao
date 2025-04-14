@@ -504,8 +504,8 @@ main {
 
         @media (max-width: 768px) {
           & .swiper-slide {
-            width: 288px;
-            height: 192px;
+            width: 360px;
+            height: 240px;
           }
         }
       }
@@ -521,6 +521,80 @@ main {
 
       & .swiper-button-next {
         right: 0;
+      }
+    }
+  }
+}
+
+.our-events {
+  margin-bottom: var(--spacing-40);
+
+  & .our-events-container {
+    & .our-events-container-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: var(--spacing-40);
+    }
+
+    & .our-events-list {
+      & .swiper-wrapper {
+        & .our-events-item {
+          border: 1px solid var(--color-brown);
+          border-radius: var(--border-radius-20);
+          margin-bottom: var(--spacing-48);
+
+          & a {
+            text-decoration: none;
+            color: var(--color-brown);
+            font-family: var(--font-roboto-serif);
+
+            & .our-events-item-img {
+              border-radius: var(--border-radius-20) var(--border-radius-20) 0 0;
+              margin-bottom: var(--spacing-16);
+              height: 295px;
+              object-fit: cover;
+            }
+
+            & .our-events-item-img-casamento {
+              object-position: top;
+            }
+
+            & h2 {
+              font-size: var(--font-size-20);
+              padding: 0 var(--spacing-16);
+              margin-bottom: var(--spacing-16);
+            }
+
+            & p {
+              font-size: var(--font-size-16);
+              padding: 0 var(--spacing-16);
+              margin-bottom: var(--spacing-16);
+
+              &:last-child {
+                text-decoration: underline;
+                cursor: pointer;
+                color: var(--color-red);
+              }
+            }
+          }
+        }
+      }
+
+      & .our-events-list-pagination-container {
+        & .swiper-pagination-bullet-active {
+          background-color: var(--color-gold);
+        }
+
+        & .swiper-pagination-bullet {
+          width: 15px;
+          height: 15px;
+        }
+
+        & .our-events-list-button-next,
+        & .our-events-list-button-prev {
+          display: none;
+        }
       }
     }
   }
