@@ -9,10 +9,12 @@
   --font-size-61: 3.8125rem;
   --font-size-48: 3.0519rem;
   --font-size-39: 2.4413rem;
+  --font-size-32: 2rem;
   --font-size-31: 1.9531rem;
   --font-size-25: 1.5625rem;
   --font-size-24: 1.5rem;
   --font-size-20: 1.25rem;
+  --font-size-19: 1.1875rem;
   --font-size-16: 1rem;
   --font-size-12: 0.8rem;
   --spacing-2: 0.125rem;
@@ -76,6 +78,12 @@ main {
   .container {
     max-width: 1140px;
   }
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
 }
 
 .navbar {
@@ -594,6 +602,78 @@ main {
         & .our-events-list-button-next,
         & .our-events-list-button-prev {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+.services {
+  margin-bottom: var(--spacing-40);
+
+  & .services-container {
+    & .services-container-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: var(--spacing-40);
+      text-align: center;
+
+      & h2 {
+        font-size: var(--font-size-24);
+        margin-bottom: var(--spacing-16);
+
+        @media (min-width: 768px) {
+          font-size: var(--font-size-32);
+        }
+      }
+
+      & h3 {
+        font-size: var(--font-size-19);
+        font-weight: 400;
+        margin-bottom: var(--spacing-16);
+
+        @media (min-width: 768px) {
+          font-size: var(--font-size-20);
+        }
+      }
+    }
+
+    & .services-container-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-40);
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--spacing-32);
+      }
+
+      & .services-container-list-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        & img {
+          border-radius: var(--border-radius-20);
+          margin-bottom: var(--spacing-16);
+          min-height: 249px;
+          object-fit: cover;
+        }
+
+        & h3 {
+          font-size: var(--font-size-20);
+          margin-bottom: var(--spacing-16);
+          font-weight: 500;
+        }
+
+        & p {
+          font-size: var(--font-size-16);
+          font-weight: 400;
         }
       }
     }
