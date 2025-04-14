@@ -775,6 +775,7 @@ h3 {
     display: flex;
     align-items: flex-start;
     gap: var(--spacing-40);
+    margin-bottom: var(--spacing-40);
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -804,6 +805,10 @@ h3 {
           color: var(--color-brown);
           font-size: var(--font-size-16);
         }
+      }
+
+      & .footer-container-first-social-media {
+        margin-bottom: var(--spacing-20);
       }
     }
 
@@ -863,6 +868,24 @@ h3 {
           }
         }
       }
+    }
+  }
+
+  & .footer-copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    & p {
+      font-size: var(--font-size-12);
+      color: var(--color-brown);
+      margin-bottom: var(--spacing-8);
+    }
+
+    & a {
+      text-decoration: none;
+      color: var(--color-brown);
+      font-size: var(--font-size-12);
     }
   }
 }
