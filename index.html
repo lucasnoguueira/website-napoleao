@@ -579,6 +579,57 @@
           </div>
         </div>
       </section>
+
+      <section class="form-section">
+        <div class="form-section-container container">
+          <div class="form-section-container-title">
+            <h2>O espaço perfeito para o seu evento começa com uma conversa</h2>
+            <h3>Fale com um de nossos consultores e dê o primeiro passo</h3>
+          </div>
+          <div class="form-section-container-item">
+            <form
+              action="<?php echo get_template_directory_uri(); ?>/form-handler.php"
+              method="post"
+              class="form-section-container-form"
+            >
+              <div class="form-section-container-form-item">
+                <input
+                  placeholder="Nome Completo"
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="form-section-container-form-item">
+                <input placeholder="E-mail" id="email" name="email" required />
+              </div>
+              <div class="form-section-container-form-item">
+                <input
+                  placeholder="Contato"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                />
+              </div>
+              <div class="form-section-container-form-item">
+                <label for="event-type">Selecione o seu evento</label>
+                <select id="event-type" name="event-type" required>
+                  <option selected disabled></option>
+                  <option value="casamento">Casamento</option>
+                  <option value="aniversario">Aniversário</option>
+                  <option value="corporativo">Corporativo</option>
+                  <option value="debutante">Debutante</option>
+                  <option value="formatura">Formatura</option>
+                  <option value="bodas">Bodas</option>
+                </select>
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script defer src="./assets/js/index.js"></script>

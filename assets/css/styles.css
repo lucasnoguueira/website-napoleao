@@ -679,3 +679,90 @@ h3 {
     }
   }
 }
+
+.form-section {
+  margin-bottom: var(--spacing-40);
+  background-color: rgba(209, 170, 103, 0.3);
+  padding: var(--spacing-30) 0;
+
+  & .form-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-40);
+    box-sizing: border-box;
+
+    & .form-section-container-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      & h2 {
+        font-size: var(--font-size-24);
+        margin-bottom: var(--spacing-16);
+
+        @media (min-width: 768px) {
+          font-size: var(--font-size-32);
+        }
+      }
+
+      & h3 {
+        font-size: var(--font-size-19);
+        font-weight: 400;
+
+        @media (min-width: 768px) {
+          font-size: var(--font-size-20);
+        }
+      }
+    }
+
+    & .form-section-container-item {
+      & .form-section-container-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--spacing-16);
+
+        & .form-section-container-form-item {
+          width: 100%;
+
+          & input,
+          & select {
+            background-color: transparent;
+            border: 1px solid var(--color-brown);
+            color: var(--color-brown);
+            border-radius: var(--border-radius-6);
+            padding: var(--spacing-8) var(--spacing-16);
+            width: 100%;
+
+            &::placeholder {
+              color: var(--color-brown);
+            }
+
+            &:focus {
+              outline: none;
+              box-shadow: none;
+            }
+          }
+        }
+        & button {
+          background-color: transparent;
+          border: 1px solid var(--color-brown);
+          color: var(--color-brown);
+          border-radius: var(--border-radius-6);
+          width: 100%;
+          padding: var(--spacing-8) var(--spacing-16);
+        }
+
+        & button:hover {
+          background-color: var(--color-brown);
+          color: var(--color-white);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
